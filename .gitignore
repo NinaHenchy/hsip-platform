@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+database/hsip_dev.db
+data/raw/
+data/processed/
+logs/
+*.log
+.DS_Store
+.pytest_cache/

@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  hsip-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hsip_platform
+    ports:
+      - "8504:8501"
+    environment:
+      - DB_TYPE=sqlite
+      - PYTHONPATH=/app
+    volumes:
+      - hsip_db:/app/database
+      - hsip_logs:/app/logs
+      - hsip_models:/app/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 180s
+
+volumes:
+  hsip_db:
+    name: hsip_database_vol
+  hsip_logs:
+    name: hsip_logs_vol
+  hsip_models:
+    name: hsip_models_vol
