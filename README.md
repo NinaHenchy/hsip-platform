@@ -1,6 +1,8 @@
 # HSIP Platform
 ### HSE Incident Prediction & Safety Culture Intelligence
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-teal)](https://hsip-platform-ninahenchy.streamlit.app/)
+
 > The only platform in the portfolio that is **purely predictive on safety data**.
 > Predicts Lost Time Injuries 30 days ahead from leading safety indicators.
 
@@ -9,6 +11,8 @@
 [![Model](https://img.shields.io/badge/Model-Gradient%20Boosting-teal)](.)
 [![Tests](https://img.shields.io/badge/Tests-19%20Passed-brightgreen)](.)
 [![Standard](https://img.shields.io/badge/Standard-ISO%2045001-orange)](.)
+
+![Dashboard](docs/screenshots/dashboard_preview.png)
 
 ---
 
