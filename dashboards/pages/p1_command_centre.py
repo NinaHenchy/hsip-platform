@@ -165,7 +165,7 @@ def render_command_centre():
             col = dept if dept in pivot.columns else None
             if col is None:
                 continue
-            color = DEPT_COLORS[j % len(DEPT_COLORS)]
+            color = DEPT_COLOR_LIST[j % len(DEPT_COLOR_LIST)]
             fig_trend.add_trace(go.Scatter(
                 x=pivot["year_month"], y=pivot[col],
                 mode="lines", name=col.replace("Contractor — ","C/"),

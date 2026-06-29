@@ -327,7 +327,7 @@ def render_leading_indicators():
             ]
             cats_c = categories + [categories[0]]
             vals_c = vals + [vals[0]]
-            color  = DEPT_COLORS[j]
+            color  = DEPT_COLOR_LIST[j % len(DEPT_COLOR_LIST)]
             fig_radar.add_trace(go.Scatterpolar(
                 r=vals_c, theta=cats_c,
                 fill="toself",
