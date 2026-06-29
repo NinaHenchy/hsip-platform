@@ -114,3 +114,41 @@ def apply_layout(fig: go.Figure, title: str = "", height: int = 340) -> go.Figur
                     borderwidth=1, font=dict(size=11, color="#e8f4f8")),
     )
     return fig
+
+
+# ── Convenience alias ─────────────────────────────────────────────────────
+T = THEME
+
+
+# ── SCI colour helper ─────────────────────────────────────────────────────
+def sci_gauge_color(sci: float) -> str:
+    """Return teal-slate theme color for a given SCI score."""
+    if sci >= 80:   return THEME["green"]
+    if sci >= 65:   return THEME["blue"]
+    if sci >= 50:   return THEME["amber"]
+    return THEME["red"]
+
+
+# ── Department colour palette ─────────────────────────────────────────────
+DEPT_COLORS = {
+    "Operations":           "#00b4d8",
+    "Maintenance":          "#06d6a0",
+    "HSE":                  "#f59e0b",
+    "Drilling":             "#ef4444",
+    "Process Engineering":  "#818cf8",
+    "Logistics":            "#48cae4",
+    "Contractor":           "#f97316",
+    "Management":           "#7aaab8",
+    "Electrical":           "#a78bfa",
+    "Instrumentation":      "#34d399",
+    "Quality Assurance":    "#fbbf24",
+}
+
+
+# ── SCI threshold colour map ─────────────────────────────────────────────
+SCI_COLORS = {
+    "Excellent": "#06d6a0",
+    "Good":      "#00b4d8",
+    "Fair":      "#f59e0b",
+    "Poor":      "#ef4444",
+}
