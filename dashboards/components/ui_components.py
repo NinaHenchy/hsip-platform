@@ -122,7 +122,6 @@ T = THEME
 
 # ── SCI colour helper ─────────────────────────────────────────────────────
 def sci_gauge_color(sci: float) -> str:
-    """Return teal-slate theme color for a given SCI score."""
     if sci >= 80:   return THEME["green"]
     if sci >= 65:   return THEME["blue"]
     if sci >= 50:   return THEME["amber"]
@@ -152,3 +151,17 @@ SCI_COLORS = {
     "Fair":      "#f59e0b",
     "Poor":      "#ef4444",
 }
+
+
+# ── Legacy key aliases — required by page files ───────────────────────────
+THEME["primary"]    = "#00b4d8"
+THEME["secondary"]  = "#06d6a0"
+THEME["accent"]     = "#00b4d8"
+THEME["card"]       = "#0f2228"
+THEME["card_teal"]  = "#162d35"
+THEME["text"]       = "#e8f4f8"
+THEME["text_sub"]   = "#7aaab8"
+THEME["grid"]       = "#1e3d47"
+THEME["good"]       = "#06d6a0"
+THEME["warning"]    = "#f59e0b"
+THEME["danger"]     = "#ef4444"
