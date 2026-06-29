@@ -22,7 +22,7 @@ from dashboards.data_access import (
 )
 from dashboards.components.ui_components import (
     inject_css, page_header, section_header, alert_banner,
-    apply_layout, sci_gauge_color, T, RISK_COLORS, DEPT_COLORS, SCI_COLORS
+    apply_layout, sci_gauge_color, T, RISK_COLORS, DEPT_COLORS, SCI_COLORS, DEPT_COLOR_LIST
 )
 from config.settings import DEPARTMENTS, SCI_THRESHOLDS, SCI_WEIGHTS
 

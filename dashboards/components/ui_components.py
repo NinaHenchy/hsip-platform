@@ -143,6 +143,9 @@ DEPT_COLORS = {
     "Quality Assurance":    "#fbbf24",
 }
 
+# List version for numeric loop indexing
+DEPT_COLOR_LIST = list(DEPT_COLORS.values())
+
 
 # ── SCI threshold colour map ─────────────────────────────────────────────
 SCI_COLORS = {
